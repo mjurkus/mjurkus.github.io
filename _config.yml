@@ -1,0 +1,5 @@
+pygments: true
+permalink: /post/:title
+exclude: ['.git']
+excerpt_separator: ""
+paginate: 4

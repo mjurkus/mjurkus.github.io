@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<article class="post">
+    <div class="post-header">
+        <p class="date">{{ page.date | date: "%Y-%m-%d" }}</p>
+        <h4><a href="{{ post.url }}">{{ page.title }}</a></h4>
+    </div>
+    <div class="post-body">
+        <p>{{ content }}</p>
+    </div>
+</article>
+
+{% if page.disqus_comments %}
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'mjurkus';
+      
+       (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a href="http://disqus.com/?ref_noscript=mjurkus">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+{% endif %}

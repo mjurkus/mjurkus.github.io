@@ -1,0 +1,18 @@
+---
+title: mjurkus.github.io
+nav: blog
+layout: default
+---
+    <h3>Latest</h3>
+    {% for post in site.posts limit:5 %}
+        <article class="post no-border">
+            <div class="post-header">
+                <p class="date">{{ post.date | date: "%Y-%m-%d" }}</p>
+                <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+            </div>
+            <div class="post-body">
+                <p>{{ post.description }}</p>
+            </div>
+        </article>
+    {% endfor %}
+</div>
